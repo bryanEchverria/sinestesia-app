@@ -1,0 +1,16 @@
+/*abstracts */
+@use '../public/sass/abstracts/variables';
+@use '../public/sass/abstracts/mixins';
+
+/*base*/
+
+@use '../public/sass/base/base';
+@use '../public/sass/base/resets';
+
+// COMPONENTS
+
+@use '../public/sass/components/cardContainer';
+@use '../public/sass/components/navBarMain';
+@use '../public/sass/components/footerContainer';
+@use '../public/sass/components/carouselContainer';
+@use '../public/sass/components/PaginationContainer';

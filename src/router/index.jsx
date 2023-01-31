@@ -3,6 +3,7 @@ import AboutPage from '../pages/about';
 import ContactHome from '../pages/contact'
 import HomePage from '../pages/home';
 import ProductPages from '../pages/productsPages';
+import ProductSelected from '../pages/productSelected'
 import {createBrowserRouter} from 'react-router-dom';
 
 
@@ -19,10 +20,11 @@ export const router = createBrowserRouter([
         path: "/contact",
         element: <ContactHome />,
     },
+
+
     {
-        path: "/products",
-        element: <ProductPages />,
+        path: "/productselected",
+        element: <ProductSelected/>,
     },
-
-
+    
 ]);

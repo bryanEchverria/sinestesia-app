@@ -20,7 +20,7 @@ import UserIcon from '../icons/userIcon.jsx';
 import SessionModal from './sessionModal.jsx';
 
 
-function NavScrollExample() {
+function MainNavBar() {
 
   const [show, setShow] = useState(false);
  const handleShow = () => setShow(true);
@@ -28,34 +28,34 @@ function NavScrollExample() {
   
   return (  
   <>
-  <Navbar>
-    <Container fluid>
-      <Nav   className="ms-auto gap-3 ">
-      <Nav.Link gap={3}> <CartIcon/></Nav.Link>
-      <Nav.Link onClick={handleShow}> <UserIcon/> </Nav.Link>
+  <Navbar className='navbar_container'>
+    <Container  className="navbar_nav" fluid>
+      <Nav   className=" ms-auto gap-3 ">
+      <Nav.Item> <FacebookIcon/></Nav.Item>
+        <Nav.Item> <InstagramItem/></Nav.Item>
       
-      {/* <Nav.Link onClick={()=>{handleShow}}> <UserIcon/> </Nav.Link> */}
-      <hr className="text-black-50" />
+        <hr className="text-black-50" />
     </Nav>
     </Container>
   </Navbar>
-   <Navbar  className="p-4  "  expand="md">
-    <Container className="d-flex justify-content-between mx-auto" fluid>
+   <Navbar  className="p-4 cla navbar_container  "  expand="md">
+    <Container className="d-flex navbar_nav  justify-content-between mx-auto" fluid>
       <Navbar.Brand className="" >  <h4>Sinestesia store</h4></Navbar.Brand>
       
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className='text-center' id="basic-navbar-nav">
       <Nav className=" mx-auto  d-flex justify-content-center">
-        <Nav.Link>Inicio</Nav.Link>
-        <Nav.Link>Nosotros</Nav.Link>
-        <Nav.Link>Contactanos</Nav.Link>
-        <Nav.Link>Producto</Nav.Link>
+        <Nav.Link>INICIO</Nav.Link>
+        <Nav.Link>NOSOTROS</Nav.Link>
+        <Nav.Link>CONTACTANOS</Nav.Link>
+        <Nav.Link>PRODUCTOS</Nav.Link>
       </Nav>
 
       <hr className="text-black-50" />
       <Nav className="gap-2">
-        <Nav.Item> <FacebookIcon/></Nav.Item>
-        <Nav.Item> <InstagramItem/></Nav.Item>
+
+      <Nav.Link>CARRITO</Nav.Link>
+        <Nav.Link>CUENTA</Nav.Link>
       </Nav>
       
       </Navbar.Collapse>
@@ -66,4 +66,4 @@ function NavScrollExample() {
   </>
  )}
   
-  export default NavScrollExample;
+  export default MainNavBar;
