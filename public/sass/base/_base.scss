@@ -10,6 +10,7 @@ h1 { color:#e3e3fa ;}
     justify-content:center;
     padding: 20px;
     color: white;
+    margin-top: 50px;
 }
 
 .row-card{
@@ -17,4 +18,10 @@ h1 { color:#e3e3fa ;}
     margin-top:50px;
     background-color: #141916;
     border-radius:5px;
+}
+
+.compromiso_title{
+    display: flex;
+    justify-content: center;
+    margin:50px;
 }

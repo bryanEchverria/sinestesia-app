@@ -6,11 +6,11 @@ import Container from 'react-bootstrap/esm/Container';
 import Col from 'react-bootstrap/Row';
 import Row from 'react-bootstrap/Col'
 
-const SessionModal = ({show, handleClose})=> {
+const SessionModal = ({show, handleClose, handleShow})=> {
 
     return(<>
         <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton> iniciar sesion </Modal.Header>
+            <Modal.Header closeButton> <Modal.Title>Inicio sesion</Modal.Title> </Modal.Header>
             <Modal.Body>
                 <Form>
                     <Container fluid>

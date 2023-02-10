@@ -5,26 +5,32 @@ import HomePage from '../pages/home';
 import ProductPages from '../pages/productsPages';
 import ProductSelected from '../pages/productSelected'
 import {createBrowserRouter} from 'react-router-dom';
-
+import RootComponent from '../rootComponent.jsx';
 
 export const router = createBrowserRouter([
     {
-        path: "/",
-        element: <HomePage />,
-    },
-    {
-        path: "/about",
-        element: <AboutPage />,
-    },
-    {
-        path: "/contact",
-        element: <ContactHome />,
-    },
-
-
-    {
-        path: "/productselected",
-        element: <ProductSelected/>,
-    },
-    
+        path:"/",
+        element:<RootComponent/>,
+        children: [
+            {
+                index: true,
+                element: <HomePage />,
+            },
+            {
+                path: "/about",
+                element: <AboutPage />,
+            },
+            {
+                path: "/contacto",
+                element: <ContactHome />,
+            },
+        
+        
+            {
+                path: "/productselected",
+                element: <ProductSelected/>,
+            },
+        ],
+    }
 ]);
+

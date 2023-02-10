@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 const CarouselComponent = () => {
   return (
     <>
-    <Carousel variant="" className="carousel">
+    <Carousel variant="" className="carousel_Container">
       
       <Carousel.Item>
         <img

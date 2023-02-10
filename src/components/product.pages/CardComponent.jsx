@@ -15,7 +15,7 @@ const CardComponent = (props)=>{
     const subtractCount =()=>{
         setCount(count-1);
     }
-    console.log('productos agregados', cart)
+   
     
     const buyProducts = (product)=>{
     setCart([...cart, product]);
@@ -31,21 +31,19 @@ const CardComponent = (props)=>{
             ).map((product)=>{return(<>
                 <Col  xs={12} md={3}>
                     <Card  key={product._id} className="mb-4 card_container">
-                        <Link to="/productselected">
+                        
                         <Card.Body className="card_body_container">
+                        <Link to="/productselected">
                             <Card.Img   src={product.image.secure_url} />
-                            {/* <div  className="card_count gap-3 "> 
-                                <Button>-</Button>
-                                <Form.Control  value={count} className=''/>
-                                <Button onClick={()=>{addCount()}}>+</Button>
-
-                                <Button onClick={()=>{buyProducts(product)}} className="">Agregar</Button>
-                            </div> */}
                              <Card.Title className='d-flex justify-content-center'>{product.name}</Card.Title>
                             <Card.Text color="">que pasa shoro</Card.Text>
                             <Card.Text>$ {product.price}</Card.Text>
+                            </Link>
+                            <div className="container_button">
+                            <Button>agregar</Button>
+                            </div>
                         </Card.Body>
-                        </Link>
+                       
                     </Card>        
                 </Col>
             
