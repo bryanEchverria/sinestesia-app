@@ -6,29 +6,17 @@ import axios from 'axios'
 
 export const NosotrosComponent = () => {
 
-    const [data, setData] =useState([]);
 
-    useEffect(() => {
-        async function fetchData() {
-          try {
-            const res = await fetch(dataJson);
-            const products = await res.json();
-            setData(products);
-          } catch (error) {
-            console.error(error);
-          }
-        }
-      
-        fetchData();
-      }, []);
+
 
   return (
    <>
     {
-        dataJson.map((obj)=>{
-            return(<>
-                <Col  xs={12} md={3} >
-                <Card key={obj.nombre}  className=' nosotros_Component'>
+        dataJson.map((obj,index)=>{
+          
+            return(
+                <Col xs={12} md={3} key={index} >
+                <Card  className='nosotros_Component'>
                     <Card.Body>
                         <img src={obj.image}></img>
                         <Card.Title>{obj.title}</Card.Title>
@@ -36,7 +24,7 @@ export const NosotrosComponent = () => {
                     </Card.Body>
                 </Card>
                 </Col>
-            </>)
+            )
         })
     }
 

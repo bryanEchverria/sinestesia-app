@@ -28,9 +28,9 @@ const CardComponent = (props)=>{
             products.slice(
                 (pagina -1) * porPagina,
                 (pagina -1) * porPagina + porPagina
-            ).map((product)=>{return(<>
-                <Col  xs={12} md={3}>
-                    <Card  key={product._id} className="mb-4 card_container">
+            ).map((product)=>{return(
+                <Col  xs={12} md={3} key={product._id}>
+                    <Card   className="mb-4 card_container">
                         
                         <Card.Body className="card_body_container">
                         <Link to="/productselected">
@@ -47,7 +47,7 @@ const CardComponent = (props)=>{
                     </Card>        
                 </Col>
             
-            </>)})
+            )})
         }    
     </>);
 }
