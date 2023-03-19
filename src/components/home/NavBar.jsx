@@ -54,7 +54,7 @@ function MainNavBar() {
       <hr className="text-black-50" />
       <Nav className="gap-2">
 
-      <Nav.Link>CARRITO</Nav.Link>
+      <Link to='/precompra' >carrito</Link>
         <Nav.Link onClick={()=>{handleShow()}}>CUENTA</Nav.Link>
       </Nav>
       

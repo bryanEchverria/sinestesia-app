@@ -1,14 +1,12 @@
 import Pagination from 'react-bootstrap/Pagination';
 import { useState } from 'react';
 import { Form,Col } from 'react-bootstrap';
-
 import React from 'react'
 
 
 const PaginationComponent = (props) => {
   const { setPagina, pagina, maximo } = props;
   const [input, setInput] = useState(1);
-
 
   const onKeyDown = (e) => {
 
@@ -24,12 +22,11 @@ const PaginationComponent = (props) => {
       else{
           setPagina (parseInt (e.target.value));
       };
-    }
+    } 
 }
   const nextPage= () => {
     setInput(parseInt(input) +1);
     setPagina(parseInt(pagina)+1);
-
   }
 
   const previousPage = () => {
@@ -41,11 +38,9 @@ const PaginationComponent = (props) => {
     setInput(e.target.value);
   }
 
-
   return ( <>
   <Col md={3}>
     
-  
     <Pagination className="pagination_container">
       <Pagination.First/>
       <Pagination.Prev    disabled = { pagina == 1 || pagina < 1 }  onClick={previousPage}  />
@@ -59,22 +54,3 @@ const PaginationComponent = (props) => {
 
 
 export default PaginationComponent
-
-
-{/* <Pagination>
-    <Pagination.First />
-    <Pagination.Prev />
-    <Pagination.Item>{1}</Pagination.Item>
-    <Pagination.Ellipsis />
-
-    <Pagination.Item>{10}</Pagination.Item>
-    <Pagination.Item>{11}</Pagination.Item>
-    <Pagination.Item active>{12}</Pagination.Item>
-    <Pagination.Item>{13}</Pagination.Item>
-    <Pagination.Item disabled>{14}</Pagination.Item>
-
-    <Pagination.Ellipsis />
-    <Pagination.Item>{20}</Pagination.Item>
-    <Pagination.Next />
-    <Pagination.Last />
-  </Pagination> */}

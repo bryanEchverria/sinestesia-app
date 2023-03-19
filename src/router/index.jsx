@@ -6,7 +6,7 @@ import ProductPages from '../pages/productsPages';
 import ProductSelected from '../pages/productSelected'
 import {createBrowserRouter} from 'react-router-dom';
 import RootComponent from '../rootComponent.jsx';
-
+import CartView from '../pages/cartView.jsx';
 export const router = createBrowserRouter([
     {
         path:"/",
@@ -30,6 +30,10 @@ export const router = createBrowserRouter([
                 path: "/productselected",
                 element: <ProductSelected/>,
             },
+            {
+                path: "/precompra",
+                element: <CartView/>,
+            }
         ],
     }
 ]);
